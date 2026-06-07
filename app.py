@@ -37,7 +37,7 @@ if 'is_streaming' not in st.session_state:
 
 if 'accel_data' not in st.session_state:
     st.session_state.accel_data = pd.DataFrame({
-        'Time': pd.date_range(start=pd.Timestamp.now(), periods=10, freq='2S'),
+        'Time': pd.date_range(start=pd.Timestamp.now(), periods=10, freq='2s'), # <--- THE FIX
         'X-Axis': np.random.normal(0, 0.05, 10),
         'Y-Axis': np.random.normal(0, 0.05, 10),
         'Z-Axis': np.random.normal(1.0, 0.1, 10)
